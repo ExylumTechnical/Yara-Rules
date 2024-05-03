@@ -21,8 +21,8 @@ rule dota3_bash_irc
         author = "Exylum Technical"
         reference = "https://exylum.tech/blog/honeypot-23-11.html"
       strings:
-        url = "pool.supportxmr.com"
-        base64 = "ICAgICAgIFtbICIkbGluZSIgPT0gJCdccicgXV0gJiYgYnJ1YWs"
+        $url = "pool.supportxmr.com"
+        $base64 = "ICAgICAgIFtbICIkbGluZSIgPT0gJCdccicgXV0gJiYgYnJ1YWs"
        condition:
         any of them
 }
