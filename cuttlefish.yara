@@ -1,4 +1,10 @@
 rule CuttleFish_URL {
+    meta:
+        description = "YARA rules based off of IOCs from Black Lotus Labs"
+        author = "Exylum Technical"
+        reference = "https://github.com/blacklotuslabs/IOCs/blob/main/Cuttlefish_IOCs.txt"
+        reference = "https://exylum.tech/blog/malware-24-05.html"
+
     strings:
         $url1 = "209.141.49.178"
         $url2 = "205.185.122.121"
@@ -12,6 +18,12 @@ rule CuttleFish_URL {
 }
 
 rule CuttleFish_FileNames {
+    meta:
+        description = "YARA rules based off of IOCs from Black Lotus Labs"
+        author = "Exylum Technical"
+        reference = "https://github.com/blacklotuslabs/IOCs/blob/main/Cuttlefish_IOCs.txt"
+        reference = "https://exylum.tech/blog/malware-24-05.html"
+    strings:
         $file_path1 = "/tmp/.timezone"
         $file_path2 = "/tmp/config js"
         $file_path3 = "/tmp/log.txt"
@@ -23,6 +35,7 @@ rule CuttleFish_FileNames {
         any of them
 }
 rule CuttleFish_FileHashes {
+    strings:
         $file_hash = "6722aeed5f5d8297de4eb2cba1c5abb900afe4a4cd64b10e2835463087936666"
         $file_hash1 = "10a4edbbb852a1b01fc6fbf0aa1407bc8589432bddb2001ae62702f18d919e89"
         $file_hash2 = "94812d391160e4fce821701b944cfd8f5fd9454b3cbb8e8974d1dc259310e500"
@@ -44,6 +57,12 @@ rule CuttleFish_FileHashes {
 }        
 
  rule CuttleFish_UniqueStrings {
+    meta:
+        description = "YARA rules based off of IOCs from Black Lotus Labs"
+        author = "Exylum Technical"
+        reference = "https://github.com/blacklotuslabs/IOCs/blob/main/Cuttlefish_IOCs.txt"
+        reference = "https://exylum.tech/blog/malware-24-05.html"
+    strings:
         $keyword1 = "username="
         $keyword2 = "user_name="
         $keyword3 = "account="
