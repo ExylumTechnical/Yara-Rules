@@ -8,11 +8,10 @@ rule CuttleFish_URL {
         $url6 = "pp.kkthreas.com"
 
     condition:
-        any of ($url*)
+        any of them
 }
 
 rule CuttleFish_FileNames {
-
         $file_path1 = "/tmp/.timezone"
         $file_path2 = "/tmp/config js"
         $file_path3 = "/tmp/log.txt"
@@ -21,7 +20,7 @@ rule CuttleFish_FileNames {
         $file_path6 = "/tmp/.Pg88s51gQG4tFyImFsT9qy6ZM5TeTF8.so"
         $file_path7 = "/tmp/.putin"
     condition:
-        any of ($file_path*)
+        any of them
 }
 rule CuttleFish_FileHashes {
         $file_hash = "6722aeed5f5d8297de4eb2cba1c5abb900afe4a4cd64b10e2835463087936666"
@@ -41,7 +40,7 @@ rule CuttleFish_FileHashes {
         $file_hash14 = "23c2e7ff2602e5f76b3f2c354761ef39966facb3b12ed05551816f482d4d5608"
         $file_hash15 = "E48c250c47dd071dcee984a8e9f27b170004ff81c3f0da6a50364fdecf800fd3"
     condition:
-        any of ($file_hash*)
+        any of them
 }        
 
  rule CuttleFish_UniqueStrings {
@@ -172,5 +171,5 @@ rule CuttleFish_FileHashes {
         $keyword125 = "eureka.awssecretkey="
 
     condition:
-        any of ($keyword*)
+        any of them
 }
